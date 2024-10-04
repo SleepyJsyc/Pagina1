@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum - Jesús Saúl</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+        }
+
+        .sidebar {
+            width: 100%;
+            max-width: 30%;
+            background-color: #e4eaf2;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .profile h2 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 22px;
+        }
+
+        .profile p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .sidebar-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .sidebar-info p {
+            margin-bottom: 10px;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 70%;
+            padding: 30px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .experience, .education {
+            margin-bottom: 30px;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 15px;
+        }
+
+        .experience-item h4, .education-item h4 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .experience-item p, .education-item p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .skills-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .skills-section div {
+            width: 45%;
+        }
+
+        .skills-section h4 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .skills-section p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .sidebar a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .main {
+                width: 100%;
+            }
+
+            .skills-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills-section div {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#formacion">Formación</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="p.jpg" alt="Foto de perfil">
+                <h2>Jesús Saúl</h2>
+                <p>Estudiante Universitario</p>
+                <p>jesus.saul@email.com<br>555 555 555<br>www.webpersonal.com</p>
+            </div>
+            <div class="sidebar-info">
+                <p>Idioma</p>
+                <p>Nativo</p>
+                <p>Software</p>
+                <p>Experto</p>
+            </div>
+
+            <a href="calificaciones.html">Ver Calificaciones</a>
+        </div>
+
+        <div class="main">
+            <h3 id="experiencia">Experiencia</h3>
+            <div class="experience">
+                <div class="experience-item">
+                    <h4>Universidad Tecnológica de X</h4>
+                    <p>Estudiante de Ingeniería en Sistemas Computacionales</p>
+                    <p>Actualmente cursando, adquiriendo habilidades en desarrollo web y bases de datos.</p>
+                </div>
+            </div>
+
+            <h3 id="formacion">Formación</h3>
+            <div class="education">
+                <div class="education-item">
+                    <h4>Ingeniería en Sistemas Computacionales - UPT</h4>
+                    <p>Cursando el plan curricular en ingeniería de sistemas con enfoque en desarrollo y administración de software.</p>
+                </div>
+            </div>
+
+            <h3 id="habilidades">Habilidades</h3>
+            <div class="skills-section">
+                <div>
+                    <h4>Idioma</h4>
+                    <p>Español (Nativo)</p>
+                    <p>Inglés (Avanzado)</p>
+                </div>
+                <div>
+                    <h4>Software</h4>
+                    <p>Python, Java, HTML, CSS, JavaScript</p>
+                    <p>Desarrollo Web Responsivo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Jesús Saúl. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
+

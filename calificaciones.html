@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Curricular y Calificaciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6 columnas como la imagen */
+            gap: 10px;
+            padding: 20px;
+        }
+
+         .semester {
+            grid-column: span 6;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .subject {
+            padding: 20px;
+            border: 1px solid #333;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: white; /* Default para las materias sin calificación */
+        }
+
+
+        .subject[data-grade="no"] {
+            background-color: white;
+            color: black;
+        }
+
+        .subject[data-grade="reprobada"] {
+            background-color: #ffcccc; /* Rojo claro para materias reprobadas */
+        }
+
+        .subject[data-grade="baja"] {
+            background-color: #fff7cc; /* Amarillo para calificaciones entre 7 y 8 */
+        }
+
+        .subject[data-grade="alta"] {
+            background-color: #c7e9c0; /* Verde claro para calificaciones entre 9 y 10 */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr); /* Ajusta a 2 columnas en pantallas pequeñas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+            }
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header nav a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            margin: 10px;
+        }
+
+        .header-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Volver al Curriculum</a> <!-- Link para regresar al índice -->
+        </nav>
+        <h1>Mapa Curricular y Calificaciones</h1>
+    </header>
+
+    <div class="container">
+        <div class="semester">Primer Ciclo de Formación</div>
+
+        <div class="subject" data-grade="alta">Inglés I - 9.5</div>
+        <div class="subject" data-grade="alta">Química Básica - 8.7</div>
+        <div class="subject" data-grade="baja">Álgebra Lineal - 7.5</div>
+        <div class="subject" data-grade="alta">Introducción a la Programación - 9.1</div>
+        <div class="subject" data-grade="baja">Tecnologías de la Información - 7.3</div>
+        <div class="subject" data-grade="alta">Herramientas de Computación - 9.5</div>
+
+        <div class="subject" data-grade="alta">Inglés II - 8.2</div>
+        <div class="subject" data-grade="baja">Desarrollo Humano y Valores - 7.8</div>
+        <div class="subject" data-grade="reprobada">Funciones Matemáticas - 5.0</div>
+        <div class="subject" data-grade="alta">Programación - 8.1</div>
+        <div class="subject" data-grade="baja">Electromagnetismo - 7.5</div>
+        <div class="subject" data-grade="alta">Arquitectura de Computadoras - 8.4</div>
+
+        <div class="semester">Segundo Ciclo de Formación</div>
+
+        <div class="subject" data-grade="baja">Inglés III - 9.0</div>
+        <div class="subject" data-grade="alta">Mantenimiento de Equipo de Cómputo - 9.1</div>
+        <div class="subject" data-grade="alta">Física - 8.4</div>
+        <div class="subject" data-grade="alta">Cálculo Diferencial - 9.0</div>
+        <div class="subject" data-grade="baja">Programación - 7.3</div>
+
+        <div class="subject" data-grade="baja">Inglés IV - 7.9</div>
+        <div class="subject" data-grade="alta">Habilidades Cognitivas - 8.5</div>
+        <div class="subject" data-grade="alta">Cálculo Integral - 8.9</div>
+        <div class="subject" data-grade="reprobada">Estructura de Datos - 5.7</div>
+        <div class="subject" data-grade="alta">Programación Orientada a Objetos - 9.3</div>
+
+        <div class="semester">Tercer Ciclo de Formación</div>
+
+        <div class="subject" data-grade="alta">Inglés VI - 9.1</div>
+        <div class="subject" data-grade="alta">Tecnologías de Bases de Datos - 8.5</div>
+        <div class="subject" data-grade="alta">Sistemas de Información - 9.0</div>
+        <div class="subject" data-grade="reprobada">Programación Web - 5.7</div>
+
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 - Jesus Saul</p>
+    </footer>
+
+</body>
+</html>
